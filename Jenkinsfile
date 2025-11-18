@@ -16,8 +16,7 @@ pipeline {
                             "PATH=${env.PATH}:$JAVA_HOME:$PYTHON_HOME"
                         ]) {
                             sh 'echo "Running on Unix"'
-                            sh 'javac HelloWorld.java'
-                            sh 'java HelloWorld'
+                            sh 'java HelloWorld.java'
                             sh 'python3 hello.py'
                         }
                     } else {
