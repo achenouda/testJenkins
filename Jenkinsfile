@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/hrhouma/hello-python.git'
+                git branch: 'main', url: 'https://github.com/achenouda/testJenkins.git'
             }
         }
         stage('Build') {
@@ -11,8 +11,9 @@ pipeline {
                 script {
                     if (isUnix()) {
                         withEnv([
-                            "JAVA_HOME=/usr/bin",
-                            "PATH=${env.PATH}:/usr/bin"
+                            "JAVA_HOME=/usr/bin/java",
+                            "PYTHON_HOME=/usr/bin/python3", 
+                            "PATH=${env.PATH}:$JAVA_HOME:$PYTHON_HOME"
                         ]) {
                             sh 'echo "Running on Unix"'
                             sh 'javac HelloWorld.java'
