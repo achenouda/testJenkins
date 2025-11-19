@@ -3,11 +3,11 @@ pipeline {
     environment {
         // Setting JAVA_HOME and PATH for Unix (Linux)
         // JAVA_HOME = "/usr/bin/java"
-        JAVA_HOME = "\$( if isUnix() then /usr/bin/java else "C:\\Program Files\\Java\\jdk-17\\java" fi )"
+        JAVA_HOME = "\$( if isUnix() then /usr/bin/java else "C:\Program Files\Java\jdk-17\java" fi )"
         //PYTHON_HOME= "/usr/bin/python3"
         PYTHON_HOME = "\$(if isUnix() then /usr/bin/python3 else  C:\\Users\\green\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe fi)"
         //PATH = "${env.PATH}:${JAVA_HOME}/bin:/usr/bin:${PYTHON_HOME}" 
-        PATH="\$(if isUnix() then  \${env.PATH}:\${JAVA_HOME}/bin:/usr/bin:\${PYTHON_HOME}  else  \${env.PATH};"C:\\Program Files\\Java\\jdk-17\\java\\bin\\";C:\\Users\\green\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe fi)"
+        PATH="\$(if isUnix() then  \${env.PATH}:\${JAVA_HOME}/bin:/usr/bin:\${PYTHON_HOME}  else  \${env.PATH};"C:\Program Files\Java\jdk-17\java\bin";C:\\Users\\green\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe fi)"
     }
     stages {
         stage('Checkout') {
