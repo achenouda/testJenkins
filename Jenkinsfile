@@ -23,6 +23,9 @@ pipeline {
                 script {
                     if (isUnix()) {
                             sh 'echo "Running on Unix"'
+                            sh 'echo $JAVA_HOME'
+                            sh 'echo $PYTHON_HOME'
+                            sh 'echo $PATH'
                             sh 'java HelloWorld.java'
                             sh 'python3 hello.py'
                         }
