@@ -10,7 +10,7 @@ pipeline {
         PYTHON_HOME = "\$(if isUnix() then /usr/bin/python3 else  C:\\Users\\green\\AppData\\Local\\Programs\\Python\\Python313 fi)"
         //PATH = "${env.PATH}:${JAVA_HOME}/bin:/usr/bin:${PYTHON_HOME}" 
         // PATH="${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
-        PATH = "\$(if isUnix() then  \${env.PATH}:\${JAVA_HOME}/bin:/usr/bin:\${PYTHON_HOME}  else  \${env.PATH};\${JAVA_HOME}\\bin;\${PYTHON_HOME} fi)"
+        PATH = "$(if isUnix() then  ${env.PATH}:${JAVA_HOME}/bin:/usr/bin:${PYTHON_HOME}  else  ${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME} fi)"
     }
     stages {
         stage('Checkout') {
