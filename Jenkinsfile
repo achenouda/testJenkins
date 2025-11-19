@@ -3,9 +3,9 @@ pipeline {
     environment {
         // Setting JAVA_HOME and PATH for Unix (Linux)
         // JAVA_HOME = "/usr/bin/java"
-        JAVA_HOME = C:\\Program Files\\Java\\jdk-17\\java
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17\\java"
         //PYTHON_HOME= "/usr/bin/python3"
-        PYTHON_HOME = C:\\Users\\green\\AppData\\Local\\Microsoft\\WindowsApps
+        PYTHON_HOME = "C:\\Users\\green\\AppData\\Local\\Microsoft\\WindowsApps"
         //PATH = "${env.PATH}:${JAVA_HOME}/bin:/usr/bin:${PYTHON_HOME}" 
         PATH="${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
     }
