@@ -5,7 +5,7 @@ pipeline {
         // JAVA_HOME = "/usr/bin/java"
         JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17'
         //PYTHON_HOME= "/usr/bin/python3"
-        PYTHON_HOME = 'C:\\Users\\green\\AppData\\Local\\Microsoft\\WindowsApps'
+        PYTHON_HOME = 'C:\\Users\\green\\AppData\\Local\\Programs\\Python\\Python313'
         //PATH = "${env.PATH}:${JAVA_HOME}/bin:/usr/bin:${PYTHON_HOME}" 
         PATH="${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
     }
@@ -30,7 +30,7 @@ pipeline {
                             bat 'echo %PYTHON_HOME%'
                             bat 'echo %PATH%' 
                             bat 'java.exe HelloWorld.java'
-                            bat 'python3 hello.py'                            
+                            bat 'python hello.py'                            
                     }
                 }
             }
