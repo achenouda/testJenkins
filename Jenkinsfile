@@ -26,11 +26,11 @@ pipeline {
                      else {
                          
                             bat 'echo "Running on Windows"'
-                            bat 'echo ${JAVA_HOME} ${PYTHON_HOME}'
                             bat 'echo %JAVA_HOME%'
-                            bat 'python3 hello.py'
+                            bat 'echo %PYTHON_HOME%'
+                            bat 'echo %PATH%' 
                             bat 'java.exe HelloWorld'
-                            
+                            bat 'python3 hello.py'                            
                     }
                 }
             }
