@@ -7,7 +7,7 @@ pipeline {
         //PYTHON_HOME= "/usr/bin/python3"
         PYTHON_HOME = 'C:\\Users\\green\\AppData\\Local\\Microsoft\\WindowsApps'
         //PATH = "${env.PATH}:${JAVA_HOME}/bin:/usr/bin:${PYTHON_HOME}" 
-        PATH="${env.PATH};%JAVA_HOME%\bin;%PYTHON_HOME%"
+        PATH="${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
     }
     stages {
         stage('Checkout') {
