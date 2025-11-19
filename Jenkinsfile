@@ -26,7 +26,7 @@ pipeline {
                      else {
                          
                             bat 'echo "Running on Windows"'
-                            bat 'python hello.py'
+                            bat 'python3 hello.py'
                             bat 'java.exe HelloWorld'
                             
                     }
