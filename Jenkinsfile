@@ -28,6 +28,7 @@ pipeline {
                             sh 'echo $PYTHON_HOME'
                             sh 'echo $PATH'
                             sh 'java HelloWorld.java'
+                            sh 'javac HelloWorld.java'
                             sh 'python3 hello.py'
                         }
                      else {
