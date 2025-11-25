@@ -4,7 +4,7 @@ pipeline {
         // Setting JAVA_HOME and PATH for Unix (Linux)
         // JAVA_HOME = "/usr/bin/java"
         // JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17'
-        JAVA_HOME= "\$( if isUnix() then /usr/bin/java else C:\\Program Files\\Java\\jdk-17 fi )"
+        JAVA_HOME= "\$( if isUnix() then /usr/lib/jvm/java-17-openjdk-amd64/bin/java else C:\\Program Files\\Java\\jdk-17 fi )"
         // JAVA_HOME= isUnix() \? '/usr/bin/java' \: 'C:\\Program Files\\Java\\jdk-17' 
         //PYTHON_HOME= "/usr/bin/python3"
         // PYTHON_HOME = 'C:\\Users\\green\\AppData\\Local\\Programs\\Python\\Python313'
@@ -28,6 +28,7 @@ pipeline {
                             sh 'echo $PYTHON_HOME'
                             sh 'echo $PATH'
                             sh 'java HelloWorld.java'
+                            sh 'javac HelloWorld.java'
                             sh 'python3 hello.py'
                         }
                      else {
