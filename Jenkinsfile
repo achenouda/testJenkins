@@ -37,6 +37,7 @@ pipeline {
                             bat 'echo %PYTHON_HOME%'
                             bat 'echo %PATH%' 
                             bat 'java.exe HelloWorld.java'
+                            bat 'javac.exe HelloWorld.java'
                             bat 'python hello.py'                            
                     }
                 }
